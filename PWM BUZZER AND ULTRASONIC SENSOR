@@ -1,19 +1,13 @@
 import RPi.GPIO as gpio
 import time
-
 gpio.setmode(gpio.BCM)
-
 TRIG = 23
 ECHO = 24
 buzzer = 17
 
-
-
 gpio.setup(buzzer, gpio.OUT)
-
 gpio.setup(TRIG, gpio.OUT)
 gpio.setup(ECHO, gpio.IN)
-
 pwm = gpio.PWM(buzzer, 50)
 pwm.start(0)
 
